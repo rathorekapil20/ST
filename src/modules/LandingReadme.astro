@@ -2,30 +2,26 @@
 
 import Confettis from '../components/ConfettiLauncher.astro';
 
-import AstroLogo from '../assets/ST 1.svg?raw'; 
+import STLogo from '../assets/ST 1.svg?raw'; 
 
-
-
-import * as readMe from '../../README.md';
-import { SITE_TITLE } from '../app/constants.js';
 ---
 
 <div
 	class="bg-gradient-to-r from-slate-100 to-slate-200 dark:from-slate-900 dark:to-slate-800 text-slate-800 dark:text-slate-100 mb-20 p-4 lg:p-16 shadow-xl shadow-slate-200 dark:shadow-slate-900"
 >
 	<header
-		class="p-8 flex justify-center items-center flex-wrap flex-col w-full mt-16"
+		class="p-8 flex justify-center items-center flex-wrap flex-col w-full"
 	>
 		<div class="flex justify-center w-full">
 			<div
-				set:html={AstroLogo}
+				set:html={STLogo}
 				class="svg-inline w-16 h-16 text-violet-700 dark:text-violet-100"
 			/>
 		</div>
 
-		<div class="format dark:format-invert lg:format-lg mt-32">
+		<div class="format dark:format-invert lg:format-lg mt-16">
 			<p
-				class="text-4xl lg:text-8xl dark:text-slate-200 text-slate-600 leading-tight"
+				class="text-4xl lg:text-8xl dark:text-slate-200 text-slate-600 "
 			>
 				<a
 					rel="noopener nofollow"
@@ -58,15 +54,6 @@ import { SITE_TITLE } from '../app/constants.js';
 
 	
 
-	<article class="flex justify-center pt-32 pb-32">
-		<div class="w-full readme format dark:format-invert lg:format-lg">
-			<h1 class="text-center">
-				<!-- {readMe.getHeadings()[0].text} -->
-				{SITE_TITLE}
-			</h1>
-			<readMe.Content />
-		</div>
-	</article>
 </div>
 
 <style>
